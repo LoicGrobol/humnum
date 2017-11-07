@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mineure Humanités Numériques : deuxième partie</title>
+    <meta charset="utf-8">
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic');
+      @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,800,800i');
+
+      body { font-family: 'Fira Sans'; font-weight: normal;}
+      h1, h2, h3 {
+        font-family: 'Fira Sans';
+        font-weight 800;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      ul li { margin-top: 1em;}
+
+      .inverse {
+        background: #272822;
+        color: #777872;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+      }
+
+       a, a > code {
+        color: #572b85;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse
+
+# Mineure Humanités Numériques
+
+### Deuxième partie : Présenter les données
+---
+
+# Détails techniques
+
+### Qui, quand, où
+  - Loïc Grobol [`<loic.grobol@gmail.com>`](mailto:loic.grobol@gmail.com)
+  - Les mardis de 14h-17h salle Rousselot (ILPGA)
+  - 2017-11-07 → 2017-12-12
+
+Et sur icampus dès qu'il sera de retour en ligne !
+
+---
+
+class: center, middle, inverse
+
+# Objectifs
+
+---
+
+# *Previously…*
+  - Chercher des données
+    - NGrams Viewer
+    - Trends
+    - Correlate
+  - *Crash course in web development*
+
+# Dans cet épisode
+**Traiter et présenter des données**
+
+---
+
+#  Présentation (interactive) de donées
+
+  - [After Babylon](http://www.puffpuffproject.com/languages.html)
+  - [Flying for Thanksgiving](http://googletrends.github.io/iframe-scaffolder/#/view?urls=Thanksgiving%202015%7Chttps:%252F%252Fgoogledataorg.cartodb.com%252Fu%252Fgoogledata%252Fviz%252Fbf595f4c-7381-11e5-9ec5-42010a14800c%252Fembed_map&active=0&sharing=1&autoplay=0&loop=1&layout=narrative&theme=red&title=A%20day%20in%20the%20life:%20US%20Thanksgiving%20on%20Google%20Flights&description=The%20day%20before%20Thanksgiving%202015%20shown%20in%20US%20domestic%20and%20international%20air%20travel%20booked%20with%20Google%20Flights)
+  - [Music Timeline](https://research.google.com/bigpicture/music/#)
+  - [Mémorial des morts aux frontières de l'Europe](http://owni.fr/2011/02/18/app-la-carte-des-morts-aux-frontieres-de-leurope/)
+  - [The depth of the problem](http://apps.washingtonpost.com/g/page/world/the-depth-of-the-problem/931/)
+
+Le but est de présenter les données de façon
+  - Claire
+  - Plaisante
+  - Diffusable
+
+---
+
+# Projet
+Réaliser une page web présentant le résultat d'une étude de données.
+
+Le résultat devra être autant que possible
+  - Pertinent
+  - Clair
+  - Plaisant
+
+  - On n'attend évidemment pas des résultats de l'ampleur de ceux présentés précédemment
+  - Mais rien ne vous en empêche !
+---
+
+class: center, middle, inverse
+
+# Au travail
+
+---
+
+# La textométrie facile
+
+  - Aller à https://thimbleprojects.org/evpok/350013/
+  - Coller un texte (de préférence assez long) dans la boîte de texte
+  - Cliquer sur « Count »
+  - Expliquer ce qui se passe
+
+On va d'abord essayer de reproduire cet résultat, puis de l'améliorer.
+
+---
+
+# Au commencement
+Dans tout ce qui suit, la [documentation web MDN](https://developer.mozilla.org) est votre meilleure amie
+
+  - Ouvrir un éditeur web
+    - [Thimble](https://thimble.mozilla.org)
+    - [Plunker](https://plnkr.co/)
+    - Un éditeur de texte et votre navigateur favori.
+      - En ce qui me concerne : [Atom](http://atom.io) et [Firefox](https://www.mozilla.org/firefox/)
+  - Créer une page HMTL minimale `index.html` (avec Thimble et Plunker, c'est déjà fait !)
+  - Ajouter une zone de texte (`<textarea>`) et un bouton (`<button>`)
+  - Appliquer un style qui vous plaît
+
+---
+
+# Interactivité
+Ajouter une action au clic sur le bouton
+ - Afficher `hello, world` dans la console
+ - Afficher le contenu de la zone de texte dans la console
+ - Afficher la liste des mots dans la zone de texte dans la console
+
+---
+
+# Séparation des responsabilités
+  - Dans le même dossier que `index.html`, créer un fichier `script.js` avec le contenu suivant
+
+    ```javascript
+    function main(){
+        console.log('hello, world')
+    }
+    ```
+  - Ajouter à la fin de `index.html`
+
+    ```html
+    <script src="script.js"></script>
+    ```
+  - Faire en sorte que `main()` soit déclenché par un clic sur le bouton
+  - Transformer la fonction `main()` pour qu'elle affiche la liste des mots de la zone de texte
+
+---
+
+# Un vrai compteur
+Faire en sorte que `main()` affiche la fréquence de chaque mot du contenu de la zone de texte
+
+---
+
+# Un bel affichage
+  - Faire en sorte que les mots, avec leurs fréquences, soient affichés dans un tableau
+  - Faire en sorte d'afficher les mots par ordre décroissant de fréquences
+
+---
+# De meilleures données
+  - La segmentation (la séparation du texte en mots) n'est pas idéale, l'améliorer
+  - D'autres idées ?
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create({
+          highlightStyle: "monokai"
+      });
+    </script>
+  </body>
+</html>
