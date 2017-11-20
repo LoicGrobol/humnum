@@ -4,15 +4,16 @@
     <title>Introduction aux Humanités Numériques : deuxième partie</title>
     <meta charset="utf-8">
     <style>
+      @import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,700');
       @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic');
       @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,800,800i');
 
-      body { font-family: 'Fira Sans'; font-weight: normal;}
+      body { font-family: 'Fira Sans, sans serif'; font-weight: normal;}
       h1, h2, h3 {
         font-family: 'Fira Sans';
         font-weight 800;
       }
-      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-code, .remark-inline-code { font-family: 'Fira Mono', 'Ubuntu Mono', monospace; }
       ul li { margin-top: 1em;}
 
       .inverse {
@@ -160,10 +161,10 @@ Dans tout ce qui suit, la [documentation web MDN](https://developer.mozilla.org)
 ---
 
 # Interactivité
-Ajouter une action au clic sur le bouton
- - Afficher `hello, world` dans la console
- - Afficher le contenu de la zone de texte dans la console
- - Afficher la liste des mots dans la zone de texte dans la console
+
+  1. En modifiant l'attribut `onclick` du bouton, faire en sorte qu'un clic dessus affiche `hello, world` dans la console
+  2. Faire en sorte qu'un clic sur le bouton affiche le contenu de la zone de texte dans la console
+  3.  Faire en sorte qu'un clic sur le bouton affiche la liste des mots dans la zone de texte dans la console
 
 ---
 
@@ -185,18 +186,14 @@ Ajouter une action au clic sur le bouton
 
 ---
 
-# Un vrai compteur
-Faire en sorte que `main()` affiche la fréquence de chaque mot du contenu de la zone de texte
-
----
-
-# Un bel affichage
-  - Faire en sorte que les mots, avec leurs fréquences, soient affichés dans un tableau
-  - Faire en sorte d'afficher les mots par ordre décroissant de fréquences
-
----
-# De meilleures données
-  - La segmentation (la séparation du texte en mots) n'est pas idéale, l'améliorer
+# Améliorations
+  - **Un vrai compteur**
+    -Faire en sorte que `main()` affiche la fréquence de chaque mot du contenu de la zone de texte
+  - **Un bel affichage**
+    - Faire en sorte que les mots, avec leurs fréquences, soient affichés dans un tableau
+    - Faire en sorte d'afficher les mots par ordre décroissant de fréquences
+  - **De meilleures données**
+    - La segmentation (la séparation du texte en mots) n'est pas idéale, l'améliorer
   - D'autres idées ?
 
     </textarea>
