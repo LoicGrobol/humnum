@@ -37,14 +37,24 @@
     </style>
   </head>
   <body>
+    <div id="loadingalert">
+        <p>Slides loading. If this takes too long</p>
+        <ul>
+            <li>Check that Javavascript is enabled</li>
+            <li>Check that <a href="https://remarkjs.com/downloads/remark-latest.min.js">remarkjs</a> is accessible</li>
+            <li>Make sure that you are accessing this from a server, even a local one</li>
+        </ul>
+        <p>To run a local server, run <code>python3 -m http.server</code> in the same directory as this html file and go to <a href="http://localhost:8000/slide.html">http://localhost:8000/slide.html</a></p>
+    </div>
     <textarea id="source"></textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
     </script>
     <script>
-      var slideshow = remark.create({
+      let slideshow = remark.create({
           highlightStyle: "monokai",
           sourceUrl: "slide.md"
-      });
+      })
+      if (slideshow) {document.getElementById('loadingalert').style.display = 'none'}
     </script>
   </body>
 </html>
