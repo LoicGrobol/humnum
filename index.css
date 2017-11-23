@@ -6,10 +6,10 @@ body {
   font-family: "Fira Sans", sans-serif;
   padding: 5px 25px;
   font-size: 18px;
-  margin: 0;
+  margin: 0 0 0 0;
   color: rgb(27, 27, 27);
   width: 100%;
-  padding-top: 0px;
+  padding: 0 0 0 0;
 }
 
 .page_header{
