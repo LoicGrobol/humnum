@@ -9,6 +9,16 @@ Ce dépôt contient les données utilisées et les sources du site du cours (dia
  - **Site du cours** <https://loicgrobol.github.io/humnum/>
  - **Page du cours sur iCampus** <http://icampus.univ-paris3.fr/course/view.php?id=9961>
 
+## Lancer le diapora en local
+RemarkJS étant prévu pour fonctionner en mode serveur, ouvrir directement [le diaporama](slide/slide.html) risque de ne pas fonctionner hors-connexion.
+Pour utiliser le diaporama hors-connextion depuis une archive local, lancer
+
+```bash
+python3 -m http.server
+```
+
+dans le dossier racine, puis se rendre à <http://localhost:8000/slide/slide.html>.
+
 ## Licence
 Copyright © 2017 Loïc Grobol \<loic.grobol@gmail.com\>
 
